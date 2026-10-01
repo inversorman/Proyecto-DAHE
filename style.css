@@ -143,7 +143,7 @@ img {
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  color: #2346a7;
+  color: #ffffff;
 }
 
 /* ---------------ESTILOS PARA IMAGENES--------------------- */
@@ -359,13 +359,11 @@ img {
 
 /* -------------------ESTILOS PARA FORMATEAR LA SECCION BANNER------------------ */
 
-/* caja principal del banner(donde va la imagen del banner) */
+
 
 
 /* Posicionamiento de las imágenes */
-/* Posicionamiento */
-/* Posicionamiento */
-/* Posicionamiento */
+
 #banner .img1,
 #banner .img2,
 #banner .img3 
@@ -438,6 +436,13 @@ img {
       rgba(17, 72, 126, 0.211) 50%);
   z-index: 20;
 }
+
+
+/* seccion PRODUCTOS */
+body{
+  background-color: var(--color-azulpastel);
+}
+
 /* GRID DE PRODUCTOS */
 .grid-productos {
   
@@ -449,7 +454,7 @@ img {
 
 /* TARJETAS */
 .tarjeta {
-  background: #110547;
+  background: #fbfbfc;
   border-radius: 12px;
   padding: 15px;
   text-align: center;
@@ -465,13 +470,15 @@ img {
 .tarjeta img {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .tarjeta h3 {
   font-family: "Figtree", sans-serif;
-  font-size: 18px;
-  color: var(--color-amarillo);
+  font-size: 24px;
+  color: var(--color-azulpastel);
+  margin-top: -20px;
+  margin-bottom: 5px;
 }
 
 /* BOTÓN VER PRODUCTO */
@@ -484,7 +491,7 @@ img {
   border-radius: 8px;
   cursor: pointer; /* MANITO */
   font-family: "Figtree", sans-serif;
-  font-weight: 600;
+  font-weight: 800;
   transition: 0.3s ease;
 }
 
@@ -680,4 +687,4 @@ img {
 
 
 
-  
+}
