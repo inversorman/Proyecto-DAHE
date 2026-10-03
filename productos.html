@@ -4,96 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos – DAHE</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
+<body class="productos-page">
 
-<section id="productos" class="contenedor espaciado">
-    <h2 class="figtree">Tinas y Bañeras</h2>
-
-    <div class="grid-productos">
-
-        <div class="tarjeta" data-producto="Tina Modelo 1">
-            <img src="/assets/images/milano.png" alt="">
-            <h3>Tina Milano</h3>
-            <button class="btn-ver">Ver producto</button>
-        </div>
-
-        <div class="tarjeta" data-producto="Tina Modelo 2">
-            <img src="/assets/images/80_150_42.png" alt="">
-            <h3>Tina Diplomat</h3>
-            <button class="btn-ver">Ver producto</button>
-        </div>
-
-        <div class="tarjeta" data-producto="Tina Modelo 3">
-            <img src="/assets/images/70_150_36.png" alt="">
-            <h3>Tina Verona</h3>
-            <button class="btn-ver">Ver producto</button>
-        </div>
-
-        <div class="tarjeta" data-producto="Tina Modelo 4">
-            <img src="/assets/images/Nápoles.png" alt="">
-            <h3>Tina Napoles</h3>
-            <button class="btn-ver">Ver producto</button>
-        </div>
-        <div class="tarjeta" data-producto="Tina Modelo 5">
-            <img src="/assets/images/Roma.png" alt="">
-            <h3>Tina Roma</h3>
-            <button class="btn-ver">Ver producto</button>
-        </div>
-        <div class="tarjeta" data-producto="Tina Modelo 6">
-            <img src="/assets/images/sicilia.png" alt="">
-            <h3>Tina Sicilia</h3>
-            <button class="btn-ver">Ver producto</button>
-        </div>
-
+<section id="productos-header" class="contenedor espaciado">
+    <div class="titulo-productos">
+        <img src="/assets/images/logo_DAHE_3.png" alt="" class="logo-productos">
+        <h2 >Tinas de PRFV</h2>
     </div>
 </section>
 
-<!-- MODAL -->
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span id="cerrarModal" class="cerrar">&times;</span>
-        <h2 id="modalTitulo"></h2>
-        <p>Información del producto seleccionado.</p>
-    </div>
-</div>
-
-<section id="productos" class="contenedor espaciado">
-    <h2 class="figtree">Tinas y Bañeras</h2>
-
-    <div class="grid-productos">
-        <!-- tarjetas -->
-    </div>
+<section id="productos-lista" class="contenedor espaciado">
+    <div class="grid-productos"></div>
 
     <a href="index.html" class="btn-inicio">Regresar al inicio</a>
 </section>
 
 
 
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="cerrarModal" class="cerrar">&times;</span>
+
+    <!-- Contenedor del PDF -->
+    <iframe id="modalPDF" src="" frameborder="0"></iframe>
+  </div>
+</div>
+
+
+
+
+
+
+
 <!-- SCRIPT DEL MODAL -->
-<script>
-document.querySelectorAll('.btn-ver').forEach(boton => {
-    boton.addEventListener('click', function() {
-        const tarjeta = this.closest('.tarjeta');
-        const nombre = tarjeta.getAttribute('data-producto');
 
-        document.getElementById('modalTitulo').textContent = nombre;
-        document.getElementById('modal').style.display = 'block';
-    });
-});
+<script src="js/productos.js"></script>
 
-document.getElementById('cerrarModal').onclick = function() {
-    document.getElementById('modal').style.display = 'none';
-};
 
-window.onclick = function(e) {
-    if (e.target == document.getElementById('modal')) {
-        document.getElementById('modal').style.display = 'none';
-    }
-};
-</script>
 
 </body>
 </html>
