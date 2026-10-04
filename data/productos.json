@@ -1,23 +1,24 @@
 [
   {
     "nombre": "Tina Milano",
-    "imagen": "/assets/images/milano.png",
-    "pdf": "assets/fichasTecnicas/80_150_46_Milano.pdf"
+    "imagen": "/assets/images/productos/milano.png",
+    "imagenesCarrusel": [
+      "/assets/images/carrusel/milano1.png",
+      "assets/images/carrusel/milano2.png",
+      "assets/images/carrusel/milano3.jpg"
+    ],
+    "descripcion": "Tina de PRFV modelo Milano. Resistente, moderna y de alta durabilidad."
   },
   {
     "nombre": "Tina Diplomat",
-    "imagen": "/assets/images/80_150_42.png"
-  },
-  {
-    "nombre": "Tina Verona",
-    "imagen": "/assets/images/70_150_36.png"
-  },
-  {
-    "nombre": "Tina Napoles",
-    "imagen": "/assets/images/Nápoles.png"
+    "imagen": "/assets/images/productos/80_150_42.png",
+    "imagenesCarrusel": [
+      "/assets/images/diplomat1.jpg",
+      "/assets/images/diplomat2.jpg"
+    ],
+    "descripcion": "Modelo Diplomat. Diseño compacto y ergonómico."
   }
 ]
-
 
 
 

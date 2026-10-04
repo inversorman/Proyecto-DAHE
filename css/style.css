@@ -374,41 +374,119 @@ li {
 /* =========================================================
    10. MODAL
    ========================================================= */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-}
 
+   /* Estructura del modal en columnas */
 .modal-content {
-  background: #fff;
-  margin: 5% auto;
-  padding: 0;
-  width: 90%;
-  max-width: 900px;
-  height: 80vh;
-  border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
-  overflow: hidden;
+  display: flex;              /* Permite dividir en secciones verticales */
+  flex-direction: column;     /* Orden vertical */
 }
 
-#modalPDF {
+/* Carrusel ocupa 70% del alto */
+.modal-carrusel {
+  height: 70%;                /* Parte superior */
   width: 100%;
-  height: 100%;
+}
+
+/* Información ocupa 30% del alto */
+.modal-info {
+  height: 30%;                /* Parte inferior */
+  padding: 20px;
+  overflow-y: auto;           /* Si el texto es largo, agrega scroll */
+}
+
+/* Estilos del título */
+.modal-info h2 {
+  font-family: "Figtree", sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--color-azulpastel);
+}
+
+/* Estilos del texto */
+.modal-info p {
+  font-size: 16px;
+  line-height: 1.4em;
+  margin-top: 5px;
+}
+
+
+/* Botón circular moderno para cerrar el modal */
+.btn-cerrar-modal {
+  position: absolute;        /* Se mantiene arriba a la derecha */
+  top: 10px;
+  right: 10px;
+  width: 25px;               /* Tamaño del botón */
+  height: 25px;
+  background: #070707;       /* Azul pastel DAHE */
+  color: #fff;               /* Ícono blanco */
   border: none;
-}
-
-
-.cerrar {
-  float: right;
-  font-size: 28px;
+  border-radius: 50%;        /* Botón redondo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s ease;     /* Animación suave */
+  z-index: 10;
 }
+
+/* Efecto hover */
+.btn-cerrar-modal:hover {
+  background: #ffde16;       /* Amarillo DAHE */
+  color: #2346a7;            /* Ícono azul */
+  transform: scale(1.1);     /* Se agranda un poco */
+}
+
+
+/* ============================================================
+   FLECHAS DEL CARRUSEL DE BOOTSTRAP
+   ============================================================ */
+/* ============================================================
+   MOVER Y CENTRAR LAS FLECHAS DEL CARRUSEL
+   ============================================================ */
+
+/*
+  Bootstrap coloca las flechas a los lados usando "position: absolute".
+  Para moverlas abajo, primero anulamos esa posición.
+*/
+.carousel-control-prev,
+.carousel-control-next {
+  position: static;   /* Quita la posición absoluta */
+  width: auto;        /* Quita el ancho lateral que empuja la flecha */
+  margin: 0;          /* Evita que se alineen a la izquierda */
+  padding: 5px;      /* Tamaño del botón */
+}
+
+/*
+  Este contenedor agrupa las flechas y las centra horizontalmente.
+  Es la clave para que no se vayan a la izquierda.
+*/
+.carousel-controls-bottom {
+  display: flex;              /* Coloca las flechas en fila */
+  justify-content: center;    /* CENTRA las flechas horizontalmente */
+  align-items: center;        /* Alineación vertical */
+  gap: 15px;                  /* Espacio entre flechas */
+  margin-top: 1px;           /* Separación respecto a la imagen */
+  width: 100%;   
+  color: #2346a7;             /* Asegura que el contenedor ocupe todo el ancho */
+}
+
+/*
+  Las flechas de Bootstrap son blancas por defecto.
+  Las invertimos para que se vean negras sobre fondo claro.
+*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+           /* Flechas negras */
+   background-color: #0541e3; /* tu azul pastel */
+  border-radius: 25%;        /* círculo */
+
+  padding: 10px;             /* tamaño del círculo */
+}
+
+
+
+
 
 
 /* =========================================================
